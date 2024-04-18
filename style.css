@@ -11,6 +11,7 @@ coloque nas sessões indicadas*/
    --cor-de-link: #000;
    --cor-de-parrafo: #464646;
    --cor-de-fundo2: #EAF2FD;
+   --cor-de--experience: #2A7AE4;
 }
 
 body {
@@ -279,19 +280,212 @@ section.academic{
 /* experiencia*/
 
 section.experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    & .experience__section__title {
+        font-size: 32px;
+        font-weight: bold;
+        color: var(--cor-de-parrafo);
+        margin-bottom: 64px;
+    }
+
+    & .experiencie__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1136px;
+        height: 406px;
+        margin-bottom: 64px;
+
+        & .experience__info {
+            width: 368px;
+            height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            & .experience__title {
+                font-size: 22px;
+                font-weight: bold;
+                color: var(--cor-de-parrafo);
+                text-align: center;
+            }
+
+            & .experience_text {
+                font-size: 16px;
+                color: var(--cor-de-parrafo);
+            }
+
+            & .experience__description {
+                display: flex;
+                gap: 10px;
+
+                & .experiencia__botao--repo {
+                    width: 116px;
+                    height: 51px;
+                    font-size: 16px;
+                    color: var(--cor-de--experience);
+                    font-family: 'Raleway';
+                    background-color: transparent;
+                    border: 1px solid var(--cor-de--experience);
+                    cursor: pointer;
+                }
+
+                & .experience__botao--demo {
+                    width: 116px;
+                    height: 51px;
+                    font-size: 16px;
+                    color: white;
+                    font-family: 'Raleway';
+                    background-color: var(--cor-de--experience);
+                    border: 1px solid var(--cor-de--experience);
+                    cursor: pointer;
+                }
+            }     
+        }
+    }
+
+    & .experiencie__box:nth-child(3) .experience__img,
+    & .experiencie__box:nth-child(5) .experience__img {
+            order: 2; 
+    }
 }
 
 /*Contacto*/
 
 section.formcontato{
+    width: 1440px;
+    height: 788px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-de-fundo2);
+
+    & .formcontato__contacto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        & .formcontato__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & .formcontato__title {
+                font-size: 32px;
+                font-weight: bold;
+                color: var(--cor-de-parrafo);
+                margin-bottom: 8px;
+            }
+
+            & .formcontato__subtext {
+                font-size: 16px;
+                color: var(--cor-de-parrafo);
+            }
+
+            & .formcontato__subtext:last-of-type {
+                margin-bottom: 32px;
+            }
+
+            & .formcontato__form{
+                display: grid;
+                grid-template-rows: 56px 56px 56px 133px 56px;
+                grid-template-areas: 
+                "nombre"
+                "email"
+                "assunto";
+                flex-direction: column;
+                gap: 32px;
+
+                & .formcontato__label {
+                    width: 650px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    background-color: white;
+                    font-size: 12px;
+                    color: rgba(70, 70, 70, 0.6);
+                }
+
+                & .formcontato__label:nth-of-type(1), 
+                .formcontato__input:nth-of-type(1) {
+                    grid-area: nombre;
+                }
+
+                & .formcontato__label:nth-of-type(2), 
+                .formcontato__input:nth-of-type(2) {
+                    grid-area: email;
+                }
+
+                & .formcontato__label:nth-of-type(3), 
+                .formcontato__input:nth-of-type(3) {
+                    grid-area: assunto;
+                }
+
+                & .formcontato__label_active {
+                    color: var(--cor-de--experience);
+                }
+
+                & .formcontato__input {
+                    width: 648px;
+                    height: 28px;
+                    padding-left: 10px;
+                    border: none;
+                    color: var(--cor-de-parrafo);
+                    border-bottom: 1px solid rgba(70, 70, 70, 0.6);
+                    outline: none;
+                    align-self: flex-end;
+                }
+
+                & .formcontato__input:focus {
+                    border-color: var(--cor-de--experience);
+                }
+
+                & .formcontato__textarea {
+                    outline: none;
+                    border: none;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    border-bottom: 1px solid rgba(70, 70, 70, 0.6);
+                    color: rgba(70, 70, 70, 0.6);
+                }
+
+                & .formcontato__botao {
+                    width: 144px;
+                    height: 51px;
+                    background-color: var(--cor-de--experience);
+                    border: none;
+                    color: white;
+                    font-family: 'Raleway'
+                }
+            }
+        }
+    }
+
 
 }
 
 /*footeer*/
 
 section.footer{
-   
+    
+   & .footer__rodape {
+    height: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Raleway';
+    color: var(--cor-de-parrafo);
+    gap: 5px;
+   }
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
