@@ -23,4 +23,14 @@ document.getElementById("currentYear").textContent = new Date().getFullYear();
 
 //Haz tú validación en javascript acá
 
-
+function validarFormulario() {
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var asunto = document.getElementById("asunto").value;
+    var mensaje = document.getElementById("mensaje").value;
+    
+    if (nombre === '' || email === '' || asunto === '' || mensaje === '') {
+      alert("Por favor, completa todos los campos.");
+      return false;
+    }
+}
